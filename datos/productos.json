@@ -1,3 +1,32 @@
-{
-
-}
+[
+    {
+        "id": 1,
+        "nombre": "Cepillo Dental Suave",
+        "marca": "OralCare",
+        "precio": 3.99
+    },
+    {
+        "id": 2,
+        "nombre": "Cepillo Dental Sensitive",
+        "marca": "Colgate",
+        "precio": 4.50
+    },
+    {
+        "id": 3,
+        "nombre": "Cepillo Dental Bambú",
+        "marca": "EcoBrush",
+        "precio": 5.25
+    },
+    {
+        "id": 4,
+        "nombre": "Cepillo Dental Eléctrico",
+        "marca": "SonicClean",
+        "precio": 12.99
+    },
+    {
+        "id": 5,
+        "nombre": "Cepillo Dental Infantil",
+        "marca": "BabySmile",
+        "precio": 3.50
+    }
+]

@@ -1,5 +1,225 @@
-body
-{
-    background-image: url('../imagenes/fondo.jpg');
+/* styles.css */
 
+/* Reset básico + variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #faf7f2;
+    color: #1e1e1e;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.landing {
+    max-width: 1200px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 3rem;
+    box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.15), 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s ease;
+}
+
+/* Header */
+.landing-header {
+    padding: 1.8rem 2.5rem 0.5rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+    color: #2b2b2b;
+}
+
+.brand-icon {
+    background: #d4c5b0;
+    width: 38px;
+    height: 38px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: #3d2e1e;
+}
+
+.tagline {
+    color: #6b5d4e;
+    font-size: 0.9rem;
+    font-weight: 400;
+    background: #f0ebe4;
+    padding: 0.4rem 1.2rem;
+    border-radius: 40px;
+    letter-spacing: 0.2px;
+}
+
+/* Contenido principal */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 2.5rem 2.5rem 2.5rem;
+    gap: 2rem;
+}
+
+.text-col {
+    flex: 1 1 300px;
+    max-width: 550px;
+}
+
+.text-col h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    color: #1f1a15;
+    margin-bottom: 1.2rem;
+}
+
+.text-col h1 span {
+    background: linear-gradient(135deg, #b8a084, #8b765b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4d4238;
+    margin-bottom: 2rem;
+    max-width: 420px;
+}
+
+/* Botón "Ver catálogo" */
+.btn-catalogo {
+    display: inline-block;
+    background: #2b241c;
+    color: #fcf8f2;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.9rem 2.6rem;
+    border-radius: 60px;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 14px rgba(43, 36, 28, 0.20);
+}
+
+.btn-catalogo:hover {
+    background: #1f1914;
+    transform: scale(1.02);
+    box-shadow: 0 10px 22px rgba(43, 36, 28, 0.25);
+}
+
+.btn-catalogo:active {
+    transform: scale(0.96);
+}
+
+/* Columna imagen */
+.image-col {
+    flex: 1 1 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-col img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2rem;
+    filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.08));
+}
+
+/* Pie de página opcional */
+.landing-footer {
+    padding: 1rem 2.5rem 1.8rem 2.5rem;
+    border-top: 1px solid #f0ebe4;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    color: #9b8b7a;
+    letter-spacing: 0.2px;
+    gap: 0.5rem;
+}
+
+.landing-footer span {
+    background: #f6f2ec;
+    padding: 0.2rem 1rem;
+    border-radius: 30px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .landing-header {
+        padding: 1.2rem 1.5rem 0.2rem 1.5rem;
+    }
+    .main-content {
+        padding: 1.5rem 1.5rem 1.8rem 1.5rem;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .text-col {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .description {
+        max-width: 100%;
+    }
+    .text-col h1 {
+        font-size: 2.6rem;
+    }
+    .image-col {
+        margin-bottom: 0.5rem;
+    }
+    .landing-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem 1.5rem 1.5rem 1.5rem;
+    }
+}
+
+@media (max-width: 430px) {
+    .text-col h1 {
+        font-size: 2.1rem;
+    }
+    .btn-catalogo {
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem 1rem;
+    }
+    .brand {
+        font-size: 1.2rem;
+    }
+    .tagline {
+        font-size: 0.75rem;
+        padding: 0.2rem 1rem;
+    }
 }
