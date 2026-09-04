@@ -1,2 +1,7 @@
 # Cloud-Computing
-Mi primera nube para almacenamiento de datos.
+
+### Como ejecutar
+debes tener node previamente instalado
+intalar dependencias
+- npm install -g serve
+- serve . (en terminal)
