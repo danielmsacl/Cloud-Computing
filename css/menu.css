@@ -1,0 +1,242 @@
+/* ===== RESET Y VARIABLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f0eb 0%, #e8e0d8 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.menu-container {
+    max-width: 900px;
+    width: 100%;
+}
+
+.menu-card {
+    background: #ffffff;
+    border-radius: 2.5rem;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12), 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+/* ===== LOGO ===== */
+.menu-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.logo-icon {
+    font-size: 3rem;
+}
+
+.menu-logo h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1f1a15;
+    letter-spacing: -0.5px;
+}
+
+.menu-subtitulo {
+    color: #6b5d4e;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+/* ===== BOTONES ===== */
+.menu-botones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.btn-menu {
+    background: #faf7f2;
+    padding: 2rem 1.5rem;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    color: #1f1a15;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-menu:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+.btn-menu:active {
+    transform: translateY(-2px);
+}
+
+.btn-icon {
+    font-size: 2.8rem;
+}
+
+.btn-texto {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1f1a15;
+}
+
+.btn-descripcion {
+    font-size: 0.85rem;
+    color: #6b5d4e;
+}
+
+/* Botón JSON */
+.btn-json {
+    border-color: #2b241c;
+    background: #fcf8f2;
+}
+
+.btn-json:hover {
+    background: #2b241c;
+    border-color: #2b241c;
+}
+
+.btn-json:hover .btn-texto {
+    color: #ffffff;
+}
+
+.btn-json:hover .btn-descripcion {
+    color: #d4c5b0;
+}
+
+/* Botón Google Sheets */
+.btn-sheets {
+    border-color: #0f9d58;
+    background: #f0faf5;
+}
+
+.btn-sheets:hover {
+    background: #0f9d58;
+    border-color: #0f9d58;
+}
+
+.btn-sheets:hover .btn-texto {
+    color: #ffffff;
+}
+
+.btn-sheets:hover .btn-descripcion {
+    color: #d4f0e0;
+}
+
+/* ===== BOTÓN VOLVER ===== */
+.btn-volver-inicio {
+    display: inline-block;
+    background: #2b241c;
+    color: #fcf8f2;
+    padding: 0.7rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+}
+
+.btn-volver-inicio:hover {
+    background: #1f1914;
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(43, 36, 28, 0.25);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .menu-card {
+        padding: 2rem 1.5rem;
+        border-radius: 2rem;
+    }
+
+    .menu-logo h1 {
+        font-size: 1.8rem;
+    }
+
+    .logo-icon {
+        font-size: 2.5rem;
+    }
+
+    .menu-botones {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .btn-menu {
+        padding: 1.5rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .btn-icon {
+        font-size: 2rem;
+    }
+
+    .btn-texto {
+        font-size: 1.1rem;
+    }
+
+    .btn-descripcion {
+        font-size: 0.8rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-card {
+        padding: 1.5rem 1rem;
+        border-radius: 1.5rem;
+    }
+
+    .menu-logo h1 {
+        font-size: 1.4rem;
+    }
+
+    .logo-icon {
+        font-size: 2rem;
+    }
+
+    .menu-subtitulo {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn-menu {
+        padding: 1.2rem 1rem;
+    }
+
+    .btn-icon {
+        font-size: 1.8rem;
+    }
+
+    .btn-texto {
+        font-size: 1rem;
+    }
+
+    .btn-descripcion {
+        font-size: 0.75rem;
+    }
+
+    .btn-volver-inicio {
+        font-size: 0.85rem;
+        padding: 0.6rem 1.5rem;
+        width: 100%;
+    }
+}
