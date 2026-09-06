@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Google Sheets - Cepillos Cloud</title>
+    <link rel="stylesheet" href="../css/google.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <a href="../index.html" class="logo-link">
+                    <span class="logo-icon">🧹</span>
+                    <span class="logo-text">Cepillos Cloud</span>
+                </a>
+                <h1>📈 Catálogo desde Google Sheets</h1>
+                <a href="../index.html" id="volver" class="btn-volver">← Volver al inicio</a>
+            </div>
+        </header>
+
+        <section class="tabla-section">
+            <div class="tabla-wrapper">
+                <table id="tablaProductos">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Marca</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoTabla">
+                        <tr>
+                            <td colspan="4" style="text-align: center; padding: 2rem; color: #6b5d4e;">
+                                ⏳ Cargando datos desde Google Sheets...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="mensajeEstado" class="mensaje-estado"></div>
+        </section>
+
+        <footer class="footer">
+            <p>© 2026 Cepillos Cloud - Todos los derechos reservados</p>
+            <p>Datos cargados desde <strong>Google Sheets</strong> ☁️</p>
+        </footer>
+    </div>
+
+    <script src="../javascript/sheets.js"></script>
+</body>
+</html>
