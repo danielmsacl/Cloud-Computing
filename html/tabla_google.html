@@ -21,6 +21,12 @@
 
         <section class="tabla-section">
             <div class="tabla-wrapper">
+                <div class="acciones-tabla">
+                    <button id="boton_crud" class="btn-agregar">
+                        ➕ Agregar Producto
+                    </button>
+                </div>
+
                 <table id="tablaProductos">
                     <thead>
                         <tr>
@@ -28,11 +34,12 @@
                             <th>Nombre</th>
                             <th>Marca</th>
                             <th>Precio</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody id="cuerpoTabla">
                         <tr>
-                            <td colspan="4" style="text-align: center; padding: 2rem; color: #6b5d4e;">
+                            <td colspan="5" style="text-align: center; padding: 2rem; color: #6b5d4e;">
                                 ⏳ Cargando datos desde Google Sheets...
                             </td>
                         </tr>
@@ -46,6 +53,70 @@
             <p>© 2026 Cepillos Cloud - Todos los derechos reservados</p>
             <p>Datos cargados desde <strong>Google Sheets</strong> ☁️</p>
         </footer>
+    </div>
+
+    <div id="modalAgregar" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>➕ Agregar Producto</h2>
+                <span class="modal-close" onclick="cerrarModalAgregar()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="inputId">ID:</label>
+                    <input type="text" id="inputId" placeholder="Ej: P001" required>
+                </div>
+                <div class="form-group">
+                    <label for="inputNombre">Nombre:</label>
+                    <input type="text" id="inputNombre" placeholder="Ej: Cepillo Dental" required>
+                </div>
+                <div class="form-group">
+                    <label for="inputMarca">Marca:</label>
+                    <input type="text" id="inputMarca" placeholder="Ej: Colgate" required>
+                </div>
+                <div class="form-group">
+                    <label for="inputPrecio">Precio:</label>
+                    <input type="number" id="inputPrecio" placeholder="Ej: 10.99" step="0.01" required>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancelar" onclick="cerrarModalAgregar()">Cancelar</button>
+                <button class="btn-guardar" onclick="agregarProducto()">Guardar Producto</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalEditar" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>✏️ Editar Producto</h2>
+                <span class="modal-close" onclick="cerrarModalEditar()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="editIndex">
+                <input type="hidden" id="editIdOriginal">
+                <div class="form-group">
+                    <label for="editId">ID:</label>
+                    <input type="text" id="editId" required>
+                </div>
+                <div class="form-group">
+                    <label for="editNombre">Nombre:</label>
+                    <input type="text" id="editNombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="editMarca">Marca:</label>
+                    <input type="text" id="editMarca" required>
+                </div>
+                <div class="form-group">
+                    <label for="editPrecio">Precio:</label>
+                    <input type="number" id="editPrecio" step="0.01" required>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancelar" onclick="cerrarModalEditar()">Cancelar</button>
+                <button class="btn-guardar" onclick="editarProducto()">Actualizar Producto</button>
+            </div>
+        </div>
     </div>
 
     <script src="../javascript/sheets.js"></script>
